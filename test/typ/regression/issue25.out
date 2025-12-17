@@ -3,13 +3,13 @@
     "typ/regression/issue25.typ"
     ( line 1 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "x")))
+       (BasicBind (Ident (Identifier "x")))
        (Dict [ Reg ( Ident (Identifier "a") , Literal (Int 5) ) ]))
 , SoftBreak
 , Code
     "typ/regression/issue25.typ"
     ( line 2 , column 2 )
-    (Let (BasicBind (Just (Identifier "key"))) (Literal (String "a")))
+    (Let (BasicBind (Ident (Identifier "key"))) (Literal (String "a")))
 , SoftBreak
 , Code
     "typ/regression/issue25.typ"

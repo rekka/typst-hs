@@ -18,7 +18,8 @@
     "typ/compiler/bench-00.typ"
     ( line 7 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "city"))) (Literal (String "Berlin")))
+       (BasicBind (Ident (Identifier "city")))
+       (Literal (String "Berlin")))
 , ParBreak
 , Comment
 , SoftBreak
@@ -30,7 +31,7 @@
     "typ/compiler/bench-00.typ"
     ( line 12 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "university")))
+       (BasicBind (Ident (Identifier "university")))
        (Block
           (Content
              [ Strong
@@ -49,7 +50,7 @@
     "typ/compiler/bench-00.typ"
     ( line 13 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "faculty")))
+       (BasicBind (Ident (Identifier "faculty")))
        (Block
           (Content
              [ Strong

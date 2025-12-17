@@ -3,7 +3,7 @@
     "typ/meta/state-00.typ"
     ( line 1 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "s")))
+       (BasicBind (Ident (Identifier "s")))
        (FuncCall
           (Ident (Identifier "state"))
           [ NormalArg (Literal (String "hey"))
@@ -70,7 +70,7 @@
               (Block
                  (CodeBlock
                     [ Let
-                        (BasicBind (Just (Identifier "it")))
+                        (BasicBind (Ident (Identifier "it")))
                         (FuncCall
                            (FieldAccess
                               (Ident (Identifier "first"))

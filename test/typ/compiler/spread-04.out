@@ -27,7 +27,7 @@
        (Ident (Identifier "f"))
        [ SpreadArg
            (For
-              (BasicBind (Just (Identifier "x")))
+              (BasicBind (Ident (Identifier "x")))
               (Array [])
               (Block (Content [])))
        ])

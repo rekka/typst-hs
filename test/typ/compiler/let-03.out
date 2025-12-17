@@ -8,8 +8,8 @@
     ( line 3 , column 2 )
     (Let
        (DestructuringBind
-          [ Simple (BasicBind (Just (Identifier "a")))
-          , Simple (BasicBind (Just (Identifier "b")))
+          [ Simple (BasicBind (Ident (Identifier "a")))
+          , Simple (BasicBind (Ident (Identifier "b")))
           ])
        (Array [ Reg (Literal (Int 1)) , Reg (Literal (Int 2)) ]))
 , SoftBreak

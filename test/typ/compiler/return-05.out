@@ -4,7 +4,7 @@
 , Code
     "typ/compiler/return-05.typ"
     ( line 2 , column 2 )
-    (Let (BasicBind (Just (Identifier "x"))) (Literal (Int 3)))
+    (Let (BasicBind (Ident (Identifier "x"))) (Literal (Int 3)))
 , SoftBreak
 , Code
     "typ/compiler/return-05.typ"

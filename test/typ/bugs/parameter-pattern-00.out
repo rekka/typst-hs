@@ -26,8 +26,8 @@
               [ NormalArg
                   (FuncExpr
                      [ DestructuringParam
-                         [ Simple (BasicBind Nothing)
-                         , Simple (BasicBind (Just (Identifier "x")))
+                         [ Simple (BasicBind Underscore)
+                         , Simple (BasicBind (Ident (Identifier "x")))
                          ]
                      ]
                      (Ident (Identifier "x")))

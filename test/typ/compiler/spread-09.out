@@ -7,14 +7,14 @@
     (Block
        (CodeBlock
           [ Let
-              (BasicBind (Just (Identifier "l")))
+              (BasicBind (Ident (Identifier "l")))
               (Array
                  [ Reg (Literal (Int 1))
                  , Reg (Literal (Int 2))
                  , Reg (Literal (Int 3))
                  ])
           , Let
-              (BasicBind (Just (Identifier "r")))
+              (BasicBind (Ident (Identifier "r")))
               (Array
                  [ Reg (Literal (Int 5))
                  , Reg (Literal (Int 6))
@@ -54,13 +54,13 @@
     (Block
        (CodeBlock
           [ Let
-              (BasicBind (Just (Identifier "x")))
+              (BasicBind (Ident (Identifier "x")))
               (Dict [ Reg ( Ident (Identifier "a") , Literal (Int 1) ) ])
           , Let
-              (BasicBind (Just (Identifier "y")))
+              (BasicBind (Ident (Identifier "y")))
               (Dict [ Reg ( Ident (Identifier "b") , Literal (Int 2) ) ])
           , Let
-              (BasicBind (Just (Identifier "z")))
+              (BasicBind (Ident (Identifier "z")))
               (Dict [ Reg ( Ident (Identifier "a") , Literal (Int 3) ) ])
           , FuncCall
               (Ident (Identifier "test"))

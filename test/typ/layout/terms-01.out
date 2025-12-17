@@ -5,7 +5,7 @@
     "typ/layout/terms-01.typ"
     ( line 2 , column 2 )
     (For
-       (BasicBind (Just (Identifier "word")))
+       (BasicBind (Ident (Identifier "word")))
        (FuncCall
           (FieldAccess
              (Ident (Identifier "map"))

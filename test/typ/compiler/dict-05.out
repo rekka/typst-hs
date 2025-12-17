@@ -5,7 +5,7 @@
     "typ/compiler/dict-05.typ"
     ( line 2 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "dict")))
+       (BasicBind (Ident (Identifier "dict")))
        (Dict
           [ Reg ( Ident (Identifier "a") , Literal (Int 3) )
           , Reg ( Ident (Identifier "c") , Literal (Int 2) )

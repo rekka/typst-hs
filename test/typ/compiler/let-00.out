@@ -4,7 +4,7 @@
 , Code
     "typ/compiler/let-00.typ"
     ( line 2 , column 2 )
-    (Let (BasicBind (Just (Identifier "x"))) (Literal None))
+    (Let (BasicBind (Ident (Identifier "x"))) (Literal None))
 , SoftBreak
 , Code
     "typ/compiler/let-00.typ"
@@ -18,7 +18,7 @@
 , Code
     "typ/compiler/let-00.typ"
     ( line 6 , column 2 )
-    (Let (BasicBind (Just (Identifier "z"))) (Literal (Int 1)))
+    (Let (BasicBind (Ident (Identifier "z"))) (Literal (Int 1)))
 , SoftBreak
 , Code
     "typ/compiler/let-00.typ"
@@ -35,7 +35,7 @@
     "typ/compiler/let-00.typ"
     ( line 10 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "fill")))
+       (BasicBind (Ident (Identifier "fill")))
        (Ident (Identifier "green")))
 , SoftBreak
 , Code

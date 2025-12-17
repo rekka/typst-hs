@@ -16,7 +16,7 @@
 , Code
     "typ/compiler/while-01.typ"
     ( line 6 , column 2 )
-    (Let (BasicBind (Just (Identifier "i"))) (Literal (Int 0)))
+    (Let (BasicBind (Ident (Identifier "i"))) (Literal (Int 0)))
 , SoftBreak
 , Code
     "typ/compiler/while-01.typ"

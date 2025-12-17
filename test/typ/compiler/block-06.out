@@ -6,10 +6,10 @@
     ( line 2 , column 2 )
     (Block
        (CodeBlock
-          [ Let (BasicBind (Just (Identifier "a"))) (Literal (String "a1"))
+          [ Let (BasicBind (Ident (Identifier "a"))) (Literal (String "a1"))
           , Block
               (CodeBlock
-                 [ Let (BasicBind (Just (Identifier "a"))) (Literal (String "a2"))
+                 [ Let (BasicBind (Ident (Identifier "a"))) (Literal (String "a2"))
                  , Block
                      (CodeBlock
                         [ FuncCall
@@ -17,7 +17,7 @@
                             [ NormalArg (Ident (Identifier "a"))
                             , NormalArg (Literal (String "a2"))
                             ]
-                        , Let (BasicBind (Just (Identifier "a"))) (Literal (String "a3"))
+                        , Let (BasicBind (Ident (Identifier "a"))) (Literal (String "a3"))
                         , FuncCall
                             (Ident (Identifier "test"))
                             [ NormalArg (Ident (Identifier "a"))

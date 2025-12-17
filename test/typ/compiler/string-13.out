@@ -92,9 +92,9 @@
        [ NormalParam (Identifier "text") ]
        (Block
           (CodeBlock
-             [ Let (BasicBind (Just (Identifier "time"))) (Literal (Int 0))
+             [ Let (BasicBind (Ident (Identifier "time"))) (Literal (Int 0))
              , For
-                 (BasicBind (Just (Identifier "match")))
+                 (BasicBind (Ident (Identifier "match")))
                  (FuncCall
                     (FieldAccess
                        (Ident (Identifier "matches")) (Ident (Identifier "text")))
@@ -106,7 +106,7 @@
                  (Block
                     (CodeBlock
                        [ Let
-                           (BasicBind (Just (Identifier "caps")))
+                           (BasicBind (Ident (Identifier "caps")))
                            (FieldAccess
                               (Ident (Identifier "captures")) (Ident (Identifier "match")))
                        , Assign

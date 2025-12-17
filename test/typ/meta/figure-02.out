@@ -14,7 +14,7 @@
           [ NormalParam (Identifier "it") ]
           (Block
              (CodeBlock
-                [ Let (BasicBind (Just (Identifier "name"))) (Literal None)
+                [ Let (BasicBind (Ident (Identifier "name"))) (Literal None)
                 , If
                     [ ( Not
                           (Equals
@@ -47,7 +47,7 @@
                              [ Assign (Ident (Identifier "name")) (Block (Content [])) ])
                       )
                     ]
-                , Let (BasicBind (Just (Identifier "title"))) (Literal None)
+                , Let (BasicBind (Ident (Identifier "title"))) (Literal None)
                 , If
                     [ ( Not
                           (Equals

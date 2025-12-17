@@ -7,7 +7,7 @@
     "typ/compiler/ops-01.typ"
     ( line 4 , column 2 )
     (For
-       (BasicBind (Just (Identifier "v")))
+       (BasicBind (Ident (Identifier "v")))
        (Array
           [ Reg (Literal (Int 1))
           , Reg (Literal (Float 3.14))

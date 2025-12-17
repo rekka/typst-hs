@@ -9,8 +9,8 @@
        [ NormalArg
            (Block
               (CodeBlock
-                 [ Let (BasicBind (Just (Identifier "a"))) (Literal (Int 1))
-                 , Let (BasicBind (Just (Identifier "b"))) (Literal (Int 2))
+                 [ Let (BasicBind (Ident (Identifier "a"))) (Literal (Int 1))
+                 , Let (BasicBind (Ident (Identifier "b"))) (Literal (Int 2))
                  , Assign
                      (Array
                         [ Reg (Ident (Identifier "a")) , Reg (Ident (Identifier "b")) ])
@@ -31,8 +31,8 @@
        [ NormalArg
            (Block
               (CodeBlock
-                 [ Let (BasicBind (Just (Identifier "a"))) (Literal (Int 1))
-                 , Let (BasicBind (Just (Identifier "b"))) (Literal (Int 2))
+                 [ Let (BasicBind (Ident (Identifier "a"))) (Literal (Int 1))
+                 , Let (BasicBind (Ident (Identifier "b"))) (Literal (Int 2))
                  , Assign
                      (Array [ Reg (Ident (Identifier "a")) , Reg Underscore ])
                      (Array
@@ -52,8 +52,8 @@
        [ NormalArg
            (Block
               (CodeBlock
-                 [ Let (BasicBind (Just (Identifier "a"))) (Literal (Int 0))
-                 , Let (BasicBind (Just (Identifier "b"))) (Literal (Int 0))
+                 [ Let (BasicBind (Ident (Identifier "a"))) (Literal (Int 0))
+                 , Let (BasicBind (Ident (Identifier "b"))) (Literal (Int 0))
                  , Assign
                      (Array
                         [ Reg Underscore
@@ -80,9 +80,9 @@
        [ NormalArg
            (Block
               (CodeBlock
-                 [ Let (BasicBind (Just (Identifier "x"))) (Literal (Int 0))
-                 , Let (BasicBind (Just (Identifier "y"))) (Literal (Int 0))
-                 , Let (BasicBind (Just (Identifier "z"))) (Literal (Int 0))
+                 [ Let (BasicBind (Ident (Identifier "x"))) (Literal (Int 0))
+                 , Let (BasicBind (Ident (Identifier "y"))) (Literal (Int 0))
+                 , Let (BasicBind (Ident (Identifier "z"))) (Literal (Int 0))
                  , Assign
                      (Dict
                         [ Reg
@@ -92,12 +92,12 @@
                                 , Reg
                                     (Binding
                                        (DestructuringBind
-                                          [ Simple (BasicBind (Just (Identifier "x")))
+                                          [ Simple (BasicBind (Ident (Identifier "x")))
                                           , WithKey
                                               (Identifier "z")
                                               (DestructuringBind
-                                                 [ Simple (BasicBind Nothing)
-                                                 , Simple (BasicBind (Just (Identifier "z")))
+                                                 [ Simple (BasicBind Underscore)
+                                                 , Simple (BasicBind (Ident (Identifier "z")))
                                                  ])
                                           ]))
                                 ]
@@ -147,7 +147,7 @@
            (Block
               (CodeBlock
                  [ Let
-                     (BasicBind (Just (Identifier "a")))
+                     (BasicBind (Ident (Identifier "a")))
                      (Array
                         [ Reg (Literal (Int 1))
                         , Reg (Literal (Int 2))
@@ -229,7 +229,7 @@
            (Block
               (CodeBlock
                  [ Let
-                     (BasicBind (Just (Identifier "d")))
+                     (BasicBind (Ident (Identifier "d")))
                      (Dict
                         [ Reg ( Ident (Identifier "x") , Literal (Int 1) )
                         , Reg ( Ident (Identifier "y") , Literal (Int 2) )
@@ -303,7 +303,7 @@
            (Block
               (CodeBlock
                  [ Let
-                     (BasicBind (Just (Identifier "d")))
+                     (BasicBind (Ident (Identifier "d")))
                      (Dict
                         [ Reg ( Ident (Identifier "x") , Literal (Int 1) )
                         , Reg
@@ -314,7 +314,7 @@
                                 ]
                             )
                         ])
-                 , Let (BasicBind (Just (Identifier "i"))) (Literal (Int 1))
+                 , Let (BasicBind (Ident (Identifier "i"))) (Literal (Int 1))
                  , Assign
                      (Array
                         [ Spr
@@ -372,7 +372,7 @@
        [ NormalArg
            (Block
               (CodeBlock
-                 [ Let (BasicBind (Just (Identifier "x"))) (Literal (Int 0))
+                 [ Let (BasicBind (Ident (Identifier "x"))) (Literal (Int 0))
                  , Assign
                      (Array
                         [ Reg (Ident (Identifier "x")) , Reg (Ident (Identifier "x")) ])
@@ -390,13 +390,13 @@
        [ NormalArg
            (Block
               (CodeBlock
-                 [ Let (BasicBind (Just (Identifier "x"))) (Literal (Int 0))
+                 [ Let (BasicBind (Ident (Identifier "x"))) (Literal (Int 0))
                  , Assign
                      (Binding
                         (DestructuringBind
                            [ Sink Nothing
-                           , Simple (BasicBind (Just (Identifier "x")))
-                           , Simple (BasicBind (Just (Identifier "x")))
+                           , Simple (BasicBind (Ident (Identifier "x")))
+                           , Simple (BasicBind (Ident (Identifier "x")))
                            ]))
                      (Array [ Reg (Literal (Int 1)) , Reg (Literal (Int 2)) ])
                  , Ident (Identifier "x")
@@ -412,7 +412,7 @@
        [ NormalArg
            (Block
               (CodeBlock
-                 [ Let (BasicBind (Just (Identifier "x"))) (Literal (Int 0))
+                 [ Let (BasicBind (Ident (Identifier "x"))) (Literal (Int 0))
                  , Assign
                      (Array
                         [ Reg (Ident (Identifier "x"))

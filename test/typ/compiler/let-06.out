@@ -8,9 +8,9 @@
     ( line 3 , column 2 )
     (Let
        (DestructuringBind
-          [ Simple (BasicBind (Just (Identifier "a")))
-          , Simple (BasicBind (Just (Identifier "b")))
-          , Sink (Just (Identifier "c"))
+          [ Simple (BasicBind (Ident (Identifier "a")))
+          , Simple (BasicBind (Ident (Identifier "b")))
+          , Sink (Just (Ident (Identifier "c")))
           ])
        (Array
           [ Reg (Literal (Int 1))

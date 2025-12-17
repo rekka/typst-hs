@@ -45,7 +45,7 @@
               (Block
                  (CodeBlock
                     [ Let
-                        (BasicBind (Just (Identifier "elements")))
+                        (BasicBind (Ident (Identifier "elements")))
                         (FuncCall
                            (Ident (Identifier "query"))
                            [ NormalArg
@@ -59,7 +59,7 @@
                            , NormalArg (Ident (Identifier "it"))
                            ])
                     , For
-                        (BasicBind (Just (Identifier "it")))
+                        (BasicBind (Ident (Identifier "it")))
                         (Ident (Identifier "elements"))
                         (Block
                            (Content

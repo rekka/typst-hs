@@ -26,14 +26,14 @@
     "typ/text/em-01.typ"
     ( line 6 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "size")))
+       (BasicBind (Ident (Identifier "size")))
        (Block
           (CodeBlock
              [ Let
-                 (BasicBind (Just (Identifier "size")))
+                 (BasicBind (Ident (Identifier "size")))
                  (Plus (Literal (Numeric 0.25 Em)) (Literal (Numeric 1.0 Pt)))
              , For
-                 (BasicBind Nothing)
+                 (BasicBind Underscore)
                  (FuncCall
                     (Ident (Identifier "range")) [ NormalArg (Literal (Int 3)) ])
                  (Block

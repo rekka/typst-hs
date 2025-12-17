@@ -18,14 +18,14 @@
     "typ/compiler/label-01.typ"
     ( line 4 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "a")))
+       (BasicBind (Ident (Identifier "a")))
        (Block (Content [ Strong [ Text "A" ] ])))
 , SoftBreak
 , Code
     "typ/compiler/label-01.typ"
     ( line 5 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "b")))
+       (BasicBind (Ident (Identifier "b")))
        (Block (Content [ Strong [ Text "B" ] ])))
 , SoftBreak
 , Code

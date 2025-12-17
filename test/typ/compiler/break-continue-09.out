@@ -9,7 +9,7 @@
     "typ/compiler/break-continue-09.typ"
     ( line 4 , column 2 )
     (For
-       (BasicBind (Just (Identifier "color")))
+       (BasicBind (Ident (Identifier "color")))
        (Array
           [ Reg (Ident (Identifier "red"))
           , Reg (Ident (Identifier "blue"))

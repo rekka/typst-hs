@@ -169,7 +169,8 @@
     "typ/compiler/ops-08.typ"
     ( line 21 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "t"))) (Block (Content [ Text "a" ])))
+       (BasicBind (Ident (Identifier "t")))
+       (Block (Content [ Text "a" ])))
 , SoftBreak
 , Code
     "typ/compiler/ops-08.typ"

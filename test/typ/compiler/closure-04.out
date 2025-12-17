@@ -6,14 +6,14 @@
     ( line 2 , column 2 )
     (Block
        (CodeBlock
-          [ Let (BasicBind (Just (Identifier "x"))) (Literal (Int 1))
+          [ Let (BasicBind (Ident (Identifier "x"))) (Literal (Int 1))
           , LetFunc
               (Identifier "f")
               []
               (Block
                  (CodeBlock
                     [ Let
-                        (BasicBind (Just (Identifier "x")))
+                        (BasicBind (Ident (Identifier "x")))
                         (Plus (Ident (Identifier "x")) (Literal (Int 2)))
                     , Ident (Identifier "x")
                     ]))

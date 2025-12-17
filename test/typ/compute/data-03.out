@@ -14,7 +14,7 @@
     "typ/compute/data-03.typ"
     ( line 4 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "data")))
+       (BasicBind (Ident (Identifier "data")))
        (FuncCall
           (Ident (Identifier "csv"))
           [ NormalArg (Literal (String "/assets/files/zoo.csv")) ]))
@@ -23,7 +23,7 @@
     "typ/compute/data-03.typ"
     ( line 5 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "cells")))
+       (BasicBind (Ident (Identifier "cells")))
        (Plus
           (FuncCall
              (FieldAccess

@@ -5,7 +5,7 @@
     "typ/meta/footnote-container-01.typ"
     ( line 2 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "lang")))
+       (BasicBind (Ident (Identifier "lang")))
        (FuncCall
           (Ident (Identifier "footnote"))
           [ BlockArg [ Text "Languages" , Text "." ] ]))
@@ -14,7 +14,7 @@
     "typ/meta/footnote-container-01.typ"
     ( line 3 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "nums")))
+       (BasicBind (Ident (Identifier "nums")))
        (FuncCall
           (Ident (Identifier "footnote"))
           [ BlockArg [ Text "Numbers" , Text "." ] ]))

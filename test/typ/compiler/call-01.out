@@ -16,7 +16,7 @@
     "typ/compiler/call-01.typ"
     ( line 5 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "alias")))
+       (BasicBind (Ident (Identifier "alias")))
        (Ident (Identifier "type")))
 , SoftBreak
 , Code

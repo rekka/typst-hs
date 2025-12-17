@@ -5,7 +5,7 @@
     "typ/compiler/field-00.typ"
     ( line 2 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "dict")))
+       (BasicBind (Ident (Identifier "dict")))
        (Dict
           [ Reg ( Ident (Identifier "nothing") , Literal (String "ness") )
           , Reg ( Ident (Identifier "hello") , Literal (String "world") )
@@ -28,7 +28,7 @@
     (Block
        (CodeBlock
           [ Let
-              (BasicBind (Just (Identifier "world")))
+              (BasicBind (Ident (Identifier "world")))
               (FieldAccess
                  (Ident (Identifier "hello")) (Ident (Identifier "dict")))
           , FuncCall

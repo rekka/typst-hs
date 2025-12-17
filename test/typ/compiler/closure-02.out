@@ -9,7 +9,7 @@
     (Block
        (CodeBlock
           [ Let
-              (BasicBind (Just (Identifier "chain")))
+              (BasicBind (Ident (Identifier "chain")))
               (FuncExpr
                  [ NormalParam (Identifier "f") , NormalParam (Identifier "g") ]
                  (FuncExpr
@@ -21,17 +21,17 @@
                               (Ident (Identifier "g")) [ NormalArg (Ident (Identifier "x")) ])
                        ])))
           , Let
-              (BasicBind (Just (Identifier "f")))
+              (BasicBind (Ident (Identifier "f")))
               (FuncExpr
                  [ NormalParam (Identifier "x") ]
                  (Plus (Ident (Identifier "x")) (Literal (Int 1))))
           , Let
-              (BasicBind (Just (Identifier "g")))
+              (BasicBind (Ident (Identifier "g")))
               (FuncExpr
                  [ NormalParam (Identifier "x") ]
                  (Times (Literal (Int 2)) (Ident (Identifier "x"))))
           , Let
-              (BasicBind (Just (Identifier "h")))
+              (BasicBind (Ident (Identifier "h")))
               (FuncCall
                  (Ident (Identifier "chain"))
                  [ NormalArg (Ident (Identifier "f"))

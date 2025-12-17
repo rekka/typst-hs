@@ -5,7 +5,7 @@
     "typ/compiler/set-01.typ"
     ( line 2 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "fruit")))
+       (BasicBind (Ident (Identifier "fruit")))
        (Block
           (Content
              [ SoftBreak

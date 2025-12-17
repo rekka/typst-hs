@@ -3,7 +3,7 @@
     "typ/regression/issue3.typ"
     ( line 1 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "alpha")))
+       (BasicBind (Ident (Identifier "alpha")))
        (Dict
           [ Reg
               ( Ident (Identifier "named")

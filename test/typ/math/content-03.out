@@ -5,7 +5,7 @@
     "typ/math/content-03.typ"
     ( line 2 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "here")))
+       (BasicBind (Ident (Identifier "here")))
        (FuncCall
           (FieldAccess
              (Ident (Identifier "with")) (Ident (Identifier "text")))

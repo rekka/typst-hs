@@ -5,7 +5,7 @@
     "typ/compiler/modules/chap1.typ"
     ( line 3 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "name"))) (Literal (String "Klaus")))
+       (BasicBind (Ident (Identifier "name"))) (Literal (String "Klaus")))
 , ParBreak
 , Heading 2 [ Text "Chapter" , Space , Text "1" ]
 , SoftBreak

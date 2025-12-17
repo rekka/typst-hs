@@ -5,7 +5,7 @@
     "typ/layout/enum-02.typ"
     ( line 2 , column 2 )
     (For
-       (BasicBind (Just (Identifier "i")))
+       (BasicBind (Ident (Identifier "i")))
        (FuncCall
           (Ident (Identifier "range")) [ NormalArg (Literal (Int 5)) ])
        (Block

@@ -7,7 +7,7 @@
     "typ/compiler/let-02.typ"
     ( line 3 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "a")))
+       (DestructuringBind [ Simple (BasicBind (Ident (Identifier "a"))) ])
        (Array [ Reg (Literal (Int 1)) , Reg (Literal (Int 2)) ]))
 , ParBreak
 ]

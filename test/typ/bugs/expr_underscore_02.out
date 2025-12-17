@@ -3,7 +3,7 @@
     "typ/bugs/expr_underscore_02.typ"
     ( line 1 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "d")))
+       (BasicBind (Ident (Identifier "d")))
        (Dict [ Reg ( Underscore , Literal (Int 1) ) ]))
 , ParBreak
 ]

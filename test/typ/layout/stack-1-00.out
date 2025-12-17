@@ -5,7 +5,7 @@
     "typ/layout/stack-1-00.typ"
     ( line 2 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "widths")))
+       (BasicBind (Ident (Identifier "widths")))
        (Array
           [ Reg (Literal (Numeric 30.0 Pt))
           , Reg (Literal (Numeric 20.0 Pt))
@@ -26,7 +26,7 @@
        (Block
           (CodeBlock
              [ Let
-                 (BasicBind (Just (Identifier "v")))
+                 (BasicBind (Ident (Identifier "v")))
                  (Times
                     (Plus (Ident (Identifier "i")) (Literal (Int 1)))
                     (Literal (Numeric 10.0 Percent)))
@@ -49,11 +49,11 @@
     "typ/layout/stack-1-00.typ"
     ( line 12 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "items")))
+       (BasicBind (Ident (Identifier "items")))
        (For
           (DestructuringBind
-             [ Simple (BasicBind (Just (Identifier "i")))
-             , Simple (BasicBind (Just (Identifier "w")))
+             [ Simple (BasicBind (Ident (Identifier "i")))
+             , Simple (BasicBind (Ident (Identifier "w")))
              ])
           (FuncCall
              (FieldAccess

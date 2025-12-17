@@ -7,7 +7,8 @@
     (Block
        (CodeBlock
           [ Let
-              (BasicBind (Just (Identifier "b"))) (Literal (String "module.typ"))
+              (BasicBind (Ident (Identifier "b")))
+              (Literal (String "module.typ"))
           , LetFunc
               (Identifier "f")
               []

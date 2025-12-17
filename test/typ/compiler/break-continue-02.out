@@ -4,12 +4,12 @@
 , Code
     "typ/compiler/break-continue-02.typ"
     ( line 3 , column 2 )
-    (Let (BasicBind (Just (Identifier "i"))) (Literal (Int 0)))
+    (Let (BasicBind (Ident (Identifier "i"))) (Literal (Int 0)))
 , SoftBreak
 , Code
     "typ/compiler/break-continue-02.typ"
     ( line 4 , column 2 )
-    (Let (BasicBind (Just (Identifier "x"))) (Literal (Int 0)))
+    (Let (BasicBind (Ident (Identifier "x"))) (Literal (Int 0)))
 , ParBreak
 , Code
     "typ/compiler/break-continue-02.typ"

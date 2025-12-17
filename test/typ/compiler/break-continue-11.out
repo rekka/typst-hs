@@ -7,7 +7,7 @@
     "typ/compiler/break-continue-11.typ"
     ( line 4 , column 2 )
     (For
-       (BasicBind (Just (Identifier "i")))
+       (BasicBind (Ident (Identifier "i")))
        (FuncCall
           (Ident (Identifier "range")) [ NormalArg (Literal (Int 10)) ])
        (Block
@@ -18,7 +18,7 @@
                      (Block (CodeBlock [ Block (Content [ Text "A" ]) , Break ]))
                  , NormalArg
                      (For
-                        (BasicBind Nothing)
+                        (BasicBind Underscore)
                         (FuncCall
                            (Ident (Identifier "range")) [ NormalArg (Literal (Int 3)) ])
                         (Block (Content [ Text "B" ])))

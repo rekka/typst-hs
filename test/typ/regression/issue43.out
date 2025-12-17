@@ -7,13 +7,13 @@
 , Code
     "typ/regression/issue43.typ"
     ( line 3 , column 2 )
-    (Let (BasicBind (Just (Identifier "a"))) (Literal (String "a")))
+    (Let (BasicBind (Ident (Identifier "a"))) (Literal (String "a")))
 , ParBreak
 , Code
     "typ/regression/issue43.typ"
     ( line 5 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "w")))
+       (BasicBind (Ident (Identifier "w")))
        (FuncExpr
           [ NormalParam (Identifier "x") ]
           (Plus
@@ -24,48 +24,48 @@
     "typ/regression/issue43.typ"
     ( line 7 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "x")))
+       (BasicBind (Ident (Identifier "x")))
        (Block (Content [ RawInline "hello" ])))
 , ParBreak
 , Code
     "typ/regression/issue43.typ"
     ( line 9 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "a")))
+       (BasicBind (Ident (Identifier "a")))
        (Dict [ Reg ( Ident (Identifier "a") , Literal (Int 1) ) ]))
 , ParBreak
 , Code
     "typ/regression/issue43.typ"
     ( line 11 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "b")))
+       (BasicBind (Ident (Identifier "b")))
        (Dict [ Reg ( Ident (Identifier "b") , Literal (Int 2) ) ]))
 , ParBreak
 , Code
     "typ/regression/issue43.typ"
     ( line 13 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "c")))
+       (BasicBind (Ident (Identifier "c")))
        (Dict [ Reg ( Ident (Identifier "c") , Literal (Int 3) ) ]))
 , ParBreak
 , Code
     "typ/regression/issue43.typ"
     ( line 15 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "d")))
+       (BasicBind (Ident (Identifier "d")))
        (Dict [ Spr (Ident (Identifier "a")) ]))
 , ParBreak
 , Code
     "typ/regression/issue43.typ"
     ( line 17 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "e")))
+       (BasicBind (Ident (Identifier "e")))
        (Dict [ Spr (Ident (Identifier "b")) ]))
 , ParBreak
 , Code
     "typ/regression/issue43.typ"
     ( line 19 , column 2 )
-    (Let (BasicBind (Just (Identifier "f"))) (Dict []))
+    (Let (BasicBind (Ident (Identifier "f"))) (Dict []))
 , ParBreak
 ]
 --- evaluated ---

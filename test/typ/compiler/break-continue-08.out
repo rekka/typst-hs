@@ -7,7 +7,7 @@
     "typ/compiler/break-continue-08.typ"
     ( line 3 , column 2 )
     (For
-       (BasicBind Nothing)
+       (BasicBind Underscore)
        (FuncCall
           (Ident (Identifier "range")) [ NormalArg (Literal (Int 10)) ])
        (Block

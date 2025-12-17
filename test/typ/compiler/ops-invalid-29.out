@@ -6,7 +6,7 @@
 , Code
     "typ/compiler/ops-invalid-29.typ"
     ( line 3 , column 2 )
-    (Let (BasicBind (Just (Identifier "rect"))) (Literal (String "")))
+    (Let (BasicBind (Ident (Identifier "rect"))) (Literal (String "")))
 , SoftBreak
 , Code
     "typ/compiler/ops-invalid-29.typ"

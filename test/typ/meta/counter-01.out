@@ -4,13 +4,13 @@
 , Code
     "typ/meta/counter-01.typ"
     ( line 2 , column 2 )
-    (Let (BasicBind (Just (Identifier "label"))) (Label "heya"))
+    (Let (BasicBind (Ident (Identifier "label"))) (Label "heya"))
 , SoftBreak
 , Code
     "typ/meta/counter-01.typ"
     ( line 3 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "count")))
+       (BasicBind (Ident (Identifier "count")))
        (FuncCall
           (FieldAccess
              (Ident (Identifier "display"))

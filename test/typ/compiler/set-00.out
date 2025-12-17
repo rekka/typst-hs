@@ -5,7 +5,7 @@
     "typ/compiler/set-00.typ"
     ( line 2 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "x")))
+       (BasicBind (Ident (Identifier "x")))
        (Block (Content [ Text "World" ])))
 , SoftBreak
 , Text "Hello"

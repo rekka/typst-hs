@@ -15,9 +15,8 @@ doBind ::
   Bind ->
   Val ->
   MP m ()
-doBind _ (BasicBind Nothing) _ = pure ()
-doBind updateExpression (BasicBind (Just ident)) val = updateExpression (Ident ident) val
-doBind updateExpression (ExprBind expr) val = updateExpression expr val
+doBind _ (BasicBind Underscore) _ = pure ()
+doBind updateExpression (BasicBind expr) val = updateExpression expr val
 doBind updateExpression (DestructuringBind parts) val =
   destructuringBind updateExpression parts val
 
@@ -29,7 +28,6 @@ destructuringBind ::
   MP m ()
 destructuringBind updateExpression parts val = do
   let isSink Sink {} = True
-      isSink ExprSink {} = True
       isSink _ = False
   let (fronts, rest) = break isSink parts
   let (sinks, backs) = span isSink rest
@@ -54,16 +52,14 @@ destructureDict ::
 destructureDict updateExpression fronts backs mbsink = do
   mapM_ handleDictBind (fronts ++ backs)
   case mbsink of
-    Just (Sink (Just i)) -> get >>= lift . updateExpression (Ident i) . VDict
-    Just (ExprSink expr) -> get >>= lift . updateExpression expr . VDict
+    Just (Sink (Just expr)) -> get >>= lift . updateExpression expr . VDict
     Just (Sink Nothing) -> pure ()
     Nothing -> pure ()
     Just _ -> fail "unreachable: expected Sink or SinkExpr"
   where
     handleDictBind :: Monad m => BindPart -> StateT (OM.OMap Identifier Val) (MP m) ()
     handleDictBind (Sink {}) = fail "Bind cannot contain multiple sinks"
-    handleDictBind (ExprSink {}) = fail "Bind cannot contain multiple sinks"
-    handleDictBind (Simple (BasicBind (Just i))) = do
+    handleDictBind (Simple (BasicBind (Ident i))) = do
       m <- get
       case OM.lookup i m of
         Nothing ->
@@ -93,15 +89,13 @@ destructureArray updateExpression fronts backs mbsink = do
   mapM_ handleFrontBind fronts
   mapM_ handleBackBind (reverse backs)
   case mbsink of
-    Just (Sink (Just i)) -> get >>= lift . updateExpression (Ident i) . VArray
-    Just (ExprSink expr) -> get >>= lift . updateExpression expr . VArray
+    Just (Sink (Just expr)) -> get >>= lift . updateExpression expr . VArray
     Just (Sink Nothing) -> pure ()
     Nothing -> pure ()
     Just _ -> fail "unreachable: expected Sink or SinkExpr"
   where
     handleFrontBind :: Monad m => BindPart -> StateT (V.Vector Val) (MP m) ()
     handleFrontBind (Sink {}) = fail "Bind cannot contain multiple sinks"
-    handleFrontBind (ExprSink {}) = fail "Bind cannot contain multiple sinks"
     handleFrontBind (WithKey {}) = fail "Cannot destructure array with key"
     handleFrontBind (Simple bind) = do
       v <- get
@@ -113,7 +107,6 @@ destructureArray updateExpression fronts backs mbsink = do
 
     handleBackBind :: Monad m => BindPart -> StateT (V.Vector Val) (MP m) ()
     handleBackBind (Sink {}) = fail "Bind cannot contain multiple sinks"
-    handleBackBind (ExprSink {}) = fail "Bind cannot contain multiple sinks"
     handleBackBind (WithKey {}) = fail "Cannot destructure array with key"
     handleBackBind (Simple bind) = do
       v <- get

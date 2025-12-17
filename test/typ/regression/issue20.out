@@ -3,7 +3,7 @@
     "typ/regression/issue20.typ"
     ( line 1 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "a")))
+       (BasicBind (Ident (Identifier "a")))
        (Literal (String "\nThis is a\nmultiline string\n")))
 , SoftBreak
 , Code

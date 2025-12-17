@@ -7,7 +7,7 @@
     (Block
        (CodeBlock
           [ Let
-              (BasicBind (Just (Identifier "matrix")))
+              (BasicBind (Ident (Identifier "matrix")))
               (Array
                  [ Reg
                      (Array

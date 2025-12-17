@@ -9,14 +9,14 @@
     (Block
        (CodeBlock
           [ Let
-              (BasicBind (Just (Identifier "parts")))
+              (BasicBind (Ident (Identifier "parts")))
               (Array
                  [ Reg (Literal (String "my fri"))
                  , Reg (Literal (String "end."))
                  ])
           , Block (Content [ Text "Hello," , Space ])
           , For
-              (BasicBind (Just (Identifier "s")))
+              (BasicBind (Ident (Identifier "s")))
               (Ident (Identifier "parts"))
               (Block
                  (Content

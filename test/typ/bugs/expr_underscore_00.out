@@ -2,7 +2,7 @@
 [ Code
     "typ/bugs/expr_underscore_00.typ"
     ( line 1 , column 2 )
-    (Let (BasicBind (Just (Identifier "m"))) (Literal (Int 1)))
+    (Let (BasicBind (Ident (Identifier "m"))) (Literal (Int 1)))
 , SoftBreak
 , Emph
     [ Code

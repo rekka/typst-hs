@@ -5,7 +5,7 @@
 , Code
     "typ/text/space-00.typ"
     ( line 2 , column 3 )
-    (Let (BasicBind (Just (Identifier "x"))) (Literal (Int 1)))
+    (Let (BasicBind (Ident (Identifier "x"))) (Literal (Int 1)))
 , Text "B"
 , Space
 , Code
@@ -23,7 +23,7 @@
 , Code
     "typ/text/space-00.typ"
     ( line 3 , column 4 )
-    (Let (BasicBind (Just (Identifier "x"))) (Literal (Int 2)))
+    (Let (BasicBind (Ident (Identifier "x"))) (Literal (Int 2)))
 , Text "D"
 , Space
 , Code
@@ -73,7 +73,7 @@
 , Code
     "typ/text/space-00.typ"
     ( line 7 , column 2 )
-    (Let (BasicBind (Just (Identifier "c"))) (Literal (Boolean True)))
+    (Let (BasicBind (Ident (Identifier "c"))) (Literal (Boolean True)))
 , Space
 , Text "N"
 , Code
@@ -96,7 +96,7 @@
 , Code
     "typ/text/space-00.typ"
     ( line 8 , column 2 )
-    (Let (BasicBind (Just (Identifier "c"))) (Literal (Boolean True)))
+    (Let (BasicBind (Ident (Identifier "c"))) (Literal (Boolean True)))
 , Space
 , Text "Q"
 , Space
@@ -119,7 +119,7 @@
     "typ/text/space-00.typ"
     ( line 9 , column 3 )
     (For
-       (BasicBind Nothing)
+       (BasicBind Underscore)
        (Array [ Reg (Literal None) ])
        (Block (CodeBlock [ Literal (String "U") ])))
 , Text "V"
@@ -127,7 +127,7 @@
 , Code
     "typ/text/space-00.typ"
     ( line 10 , column 2 )
-    (Let (BasicBind (Just (Identifier "foo"))) (Literal (String "A")))
+    (Let (BasicBind (Ident (Identifier "foo"))) (Literal (String "A")))
 , Space
 , HardBreak
 , Code

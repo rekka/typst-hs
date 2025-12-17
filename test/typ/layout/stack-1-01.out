@@ -14,7 +14,7 @@
     "typ/layout/stack-1-01.typ"
     ( line 4 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "x")))
+       (BasicBind (Ident (Identifier "x")))
        (FuncCall
           (Ident (Identifier "square"))
           [ KeyValArg (Identifier "size") (Literal (Numeric 10.0 Pt))

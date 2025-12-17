@@ -7,7 +7,7 @@
     (Block
        (CodeBlock
           [ Let
-              (BasicBind (Just (Identifier "adder")))
+              (BasicBind (Ident (Identifier "adder")))
               (FuncExpr
                  [ NormalParam (Identifier "x") , NormalParam (Identifier "y") ]
                  (Plus (Ident (Identifier "x")) (Ident (Identifier "y"))))

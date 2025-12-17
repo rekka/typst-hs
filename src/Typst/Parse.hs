@@ -892,7 +892,7 @@ pBaseExpr ident_parser =
     <|> pArrayExpr
     <|> pDictExpr
     <|> try (inParens pExpr)
-    <|> (Binding <$> pDestructuringBind True)
+    <|> (Binding <$> pDestructuringBind pExpr)
     <|> pLabel
     <|> (Block . Content . (: [])
          <$> lexeme (pRawBlock <|> pRawInline <|> pEquation))
@@ -1211,68 +1211,44 @@ pParam =
       i <- try pIdentifier
       (DefaultParam i <$> (sym ":" *> pExpr)) <|> pure (NormalParam i)
     pDestructuringParam = do
-      DestructuringBind parts <- pDestructuringBind False
+      DestructuringBind parts <- pDestructuringBind pIdentOrUnderscore
       pure $ DestructuringParam parts
 
-pBind :: Bool -> P Bind
-pBind False = pBasicBind <|> pDestructuringBind False
--- arbitrary expressions are allowed in assignment binds but DestructuringBind is preferred
-pBind True = pDestructuringBind True <|> pExprBind
-  where
-    pExprBind = do
-      expr <- pExpr
-      pure $ case expr of
-        Underscore -> BasicBind Nothing
-        Ident ident -> BasicBind $ Just ident
-        _ -> ExprBind expr
+pBind :: P Expr -> P Bind
+pBind allowedExpr = pDestructuringBind allowedExpr <|> (BasicBind <$> allowedExpr)
 
-pBasicBind :: P Bind
-pBasicBind = BasicBind <$> try (pBindIdentifier <|> inParens pBindIdentifier)
-
-pBindIdentifier :: P (Maybe Identifier)
-pBindIdentifier = do
-  ident <- pIdentifierOrUnderscore
-  if ident == "_"
-     then pure Nothing
-     else pure $ Just ident
-
-pDestructuringBind :: Bool -> P Bind
-pDestructuringBind allowExpr =
+pDestructuringBind :: P Expr -> P Bind
+pDestructuringBind allowedExpr =
   inParens $
     DestructuringBind <$> ((pSink <|> pWithKey <|> pSimple) `sepEndBy` (sym ","))
   where
     pSink = do
       void $ string ".."
-      if allowExpr
-        then do
-          mbexpr <- option Nothing $ Just <$> pExpr
-          pure $ case mbexpr of
-            Nothing -> Sink Nothing
-            Just Underscore -> Sink Nothing
-            Just (Ident ident) -> Sink $ Just ident
-            Just (expr) -> ExprSink expr
-        else Sink <$> option Nothing pBindIdentifier
+      mbexpr <- optionMaybe allowedExpr
+      case mbexpr of
+        Just Underscore -> unexpected "underscore not allowed"
+        _ -> pure $ Sink mbexpr
     pWithKey = do
-      key <- try $ pBindIdentifier <* sym ":"
+      key <- try $ pIdentOrUnderscore <* sym ":"
       case key of
-        Nothing -> fail "expected identifier, found underscore"
-        Just ident -> WithKey ident <$> pBind allowExpr
-    pSimple = Simple <$> pBind allowExpr
+        Ident ident -> WithKey ident <$> pBind allowedExpr
+        _ -> fail "expected identifier, found underscore"
+    pSimple = Simple <$> pBind allowedExpr
 
 -- let-expr ::= 'let' ident params? '=' expr
 pLetExpr :: P Expr
 pLetExpr = do
   pKeyword "let"
-  bind <- pBind False
+  bind <- pBind pIdentOrUnderscore
   case bind of
-    BasicBind mbname -> do
+    BasicBind bindexpr -> do
       mbparams <- option Nothing $ Just <$> pParams
       mbexpr <- option Nothing $ Just <$> (sym "=" *> pExpr)
-      case (mbparams, mbexpr, mbname) of
+      case (mbparams, mbexpr, bindexpr) of
         (Nothing, Nothing, _) -> pure $ Let bind (Literal None)
         (Nothing, Just expr, _) -> pure $ Let bind expr
-        (Just params, Just expr, Just name) -> pure $ LetFunc name params expr
-        (Just _, Just _, Nothing) -> fail "expected name for function"
+        (Just params, Just expr, Ident name) -> pure $ LetFunc name params expr
+        (Just _, Just _, _) -> fail "expected name for function"
         (Just _, Nothing, _) -> fail "expected expression for let binding"
     _ -> Let bind <$> (sym "=" *> pExpr)
 
@@ -1314,7 +1290,7 @@ pWhileExpr = pKeyword "while" *> (While <$> pExpr <*> pBlock)
 -- for-expr ::= 'for' bind 'in' expr block
 pForExpr :: P Expr
 pForExpr =
-  pKeyword "for" *> (For <$> pBind False <*> (pKeyword "in" *> pExpr) <*> pBlock)
+  pKeyword "for" *> (For <$> pBind pIdentOrUnderscore <*> (pKeyword "in" *> pExpr) <*> pBlock)
 
 pImportExpr :: P Expr
 pImportExpr = pKeyword "import" *> (Import <$> pExpr <*> pImportItems)

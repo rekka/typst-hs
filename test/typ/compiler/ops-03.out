@@ -85,7 +85,7 @@
        [ NormalArg
            (Block
               (CodeBlock
-                 [ Let (BasicBind (Just (Identifier "x"))) (Literal None)
+                 [ Let (BasicBind (Ident (Identifier "x"))) (Literal None)
                  , Assign
                      (Ident (Identifier "x"))
                      (And
@@ -129,7 +129,7 @@
     "typ/compiler/ops-03.typ"
     ( line 23 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "nums")))
+       (BasicBind (Ident (Identifier "nums")))
        (Array
           [ Reg (Literal (Int 1))
           , Reg (Literal (Float 3.14))
@@ -151,7 +151,7 @@
     "typ/compiler/ops-03.typ"
     ( line 32 , column 2 )
     (For
-       (BasicBind (Just (Identifier "v")))
+       (BasicBind (Ident (Identifier "v")))
        (Ident (Identifier "nums"))
        (Block
           (CodeBlock
@@ -246,7 +246,7 @@
     "typ/compiler/ops-03.typ"
     ( line 55 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "dims")))
+       (BasicBind (Ident (Identifier "dims")))
        (Array
           [ Reg (Literal (Numeric 10.0 Pt))
           , Reg (Literal (Numeric 1.0 Em))
@@ -264,12 +264,12 @@
     "typ/compiler/ops-03.typ"
     ( line 56 , column 2 )
     (For
-       (BasicBind (Just (Identifier "a")))
+       (BasicBind (Ident (Identifier "a")))
        (Ident (Identifier "dims"))
        (Block
           (CodeBlock
              [ For
-                 (BasicBind (Just (Identifier "b")))
+                 (BasicBind (Ident (Identifier "b")))
                  (Ident (Identifier "dims"))
                  (Block
                     (CodeBlock
@@ -290,7 +290,7 @@
                            ]
                        ]))
              , For
-                 (BasicBind (Just (Identifier "b")))
+                 (BasicBind (Ident (Identifier "b")))
                  (Array [ Reg (Literal (Int 7)) , Reg (Literal (Float 3.14)) ])
                  (Block
                     (CodeBlock
@@ -342,7 +342,7 @@
     "typ/compiler/ops-03.typ"
     ( line 69 , column 2 )
     (For
-       (BasicBind (Just (Identifier "a")))
+       (BasicBind (Ident (Identifier "a")))
        (Array
           [ Reg (Literal (Numeric 0.0 Pt))
           , Reg (Literal (Numeric 0.0 Em))
@@ -351,7 +351,7 @@
        (Block
           (CodeBlock
              [ For
-                 (BasicBind (Just (Identifier "b")))
+                 (BasicBind (Ident (Identifier "b")))
                  (Array
                     [ Reg (Literal (Numeric 10.0 Pt))
                     , Reg (Literal (Numeric 10.0 Em))

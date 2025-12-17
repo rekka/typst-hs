@@ -8,9 +8,9 @@
     ( line 4 , column 2 )
     (Block
        (CodeBlock
-          [ Let (BasicBind (Just (Identifier "x"))) (Literal (Int 1))
-          , Let (BasicBind (Just (Identifier "y"))) (Literal (Int 2))
-          , Let (BasicBind (Just (Identifier "z"))) (Literal None)
+          [ Let (BasicBind (Ident (Identifier "x"))) (Literal (Int 1))
+          , Let (BasicBind (Ident (Identifier "y"))) (Literal (Int 2))
+          , Let (BasicBind (Ident (Identifier "z"))) (Literal None)
           , Assign
               (Ident (Identifier "z"))
               (If

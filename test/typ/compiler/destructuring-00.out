@@ -4,12 +4,12 @@
     ( line 1 , column 2 )
     (Let
        (DestructuringBind
-          [ Simple (BasicBind Nothing)
+          [ Simple (BasicBind Underscore)
           , Simple
               (DestructuringBind
-                 [ Simple (BasicBind (Just (Identifier "x")))
-                 , Simple (BasicBind (Just (Identifier "y")))
-                 , Simple (BasicBind Nothing)
+                 [ Simple (BasicBind (Ident (Identifier "x")))
+                 , Simple (BasicBind (Ident (Identifier "y")))
+                 , Simple (BasicBind Underscore)
                  ])
           ])
        (Array
@@ -42,11 +42,11 @@
           [ WithKey
               (Identifier "x")
               (DestructuringBind
-                 [ Simple (BasicBind (Just (Identifier "v")))
-                 , Simple (BasicBind Nothing)
-                 , Simple (BasicBind (Just (Identifier "w")))
+                 [ Simple (BasicBind (Ident (Identifier "v")))
+                 , Simple (BasicBind Underscore)
+                 , Simple (BasicBind (Ident (Identifier "w")))
                  ])
-          , Simple (BasicBind (Just (Identifier "p")))
+          , Simple (BasicBind (Ident (Identifier "p")))
           ])
        (Dict
           [ Reg ( Ident (Identifier "p") , Literal (Int 1) )
@@ -87,16 +87,16 @@
           [ WithKey
               (Identifier "x")
               (DestructuringBind
-                 [ Simple (BasicBind (Just (Identifier "n")))
+                 [ Simple (BasicBind (Ident (Identifier "n")))
                  , WithKey
                      (Identifier "o")
                      (DestructuringBind
-                        [ Simple (BasicBind Nothing)
-                        , Simple (BasicBind (Just (Identifier "h")))
+                        [ Simple (BasicBind Underscore)
+                        , Simple (BasicBind (Ident (Identifier "h")))
                         ])
-                 , Simple (BasicBind (Just (Identifier "m")))
+                 , Simple (BasicBind (Ident (Identifier "m")))
                  ])
-          , Simple (BasicBind (Just (Identifier "r")))
+          , Simple (BasicBind (Ident (Identifier "r")))
           ])
        (Dict
           [ Reg ( Ident (Identifier "r") , Literal (Int 1) )
@@ -139,9 +139,9 @@
     ( line 10 , column 2 )
     (Let
        (DestructuringBind
-          [ Simple (BasicBind Nothing)
+          [ Simple (BasicBind Underscore)
           , Simple
-              (DestructuringBind [ Simple (BasicBind (Just (Identifier "x"))) ])
+              (DestructuringBind [ Simple (BasicBind (Ident (Identifier "x"))) ])
           ])
        (Array
           [ Reg (Literal (Int 1))
@@ -161,15 +161,15 @@
     "typ/compiler/destructuring-00.typ"
     ( line 13 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "f")))
+       (BasicBind (Ident (Identifier "f")))
        (FuncExpr
           [ SkipParam
           , DestructuringParam
-              [ Simple (BasicBind (Just (Identifier "x")))
+              [ Simple (BasicBind (Ident (Identifier "x")))
               , Simple
                   (DestructuringBind
-                     [ Simple (BasicBind Nothing)
-                     , Simple (BasicBind (Just (Identifier "y")))
+                     [ Simple (BasicBind Underscore)
+                     , Simple (BasicBind (Ident (Identifier "y")))
                      ])
               , Sink Nothing
               ]
@@ -201,16 +201,16 @@
     "typ/compiler/destructuring-00.typ"
     ( line 15 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "f")))
+       (BasicBind (Ident (Identifier "f")))
        (FuncExpr
           [ SkipParam
           , DestructuringParam
-              [ Simple (BasicBind (Just (Identifier "x")))
+              [ Simple (BasicBind (Ident (Identifier "x")))
               , WithKey
                   (Identifier "y")
                   (DestructuringBind
-                     [ Simple (BasicBind Nothing)
-                     , Simple (BasicBind (Just (Identifier "y")))
+                     [ Simple (BasicBind Underscore)
+                     , Simple (BasicBind (Ident (Identifier "y")))
                      ])
               , Sink Nothing
               ]

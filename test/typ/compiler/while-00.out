@@ -4,7 +4,7 @@
 , Code
     "typ/compiler/while-00.typ"
     ( line 2 , column 2 )
-    (Let (BasicBind (Just (Identifier "i"))) (Literal (Int 0)))
+    (Let (BasicBind (Ident (Identifier "i"))) (Literal (Int 0)))
 , SoftBreak
 , Code
     "typ/compiler/while-00.typ"
@@ -34,7 +34,7 @@
     "typ/compiler/while-00.typ"
     ( line 9 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "iter"))) (Literal (Boolean True)))
+       (BasicBind (Ident (Identifier "iter"))) (Literal (Boolean True)))
 , SoftBreak
 , Code
     "typ/compiler/while-00.typ"

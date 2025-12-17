@@ -23,7 +23,7 @@
     "typ/visualize/shape-aspect-00.typ"
     ( line 5 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "centered")))
+       (BasicBind (Ident (Identifier "centered")))
        (FuncCall
           (FieldAccess
              (Ident (Identifier "with")) (Ident (Identifier "align")))

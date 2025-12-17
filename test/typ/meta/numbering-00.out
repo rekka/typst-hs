@@ -3,7 +3,7 @@
     "typ/meta/numbering-00.typ"
     ( line 1 , column 2 )
     (For
-       (BasicBind (Just (Identifier "i")))
+       (BasicBind (Ident (Identifier "i")))
        (FuncCall
           (Ident (Identifier "range"))
           [ NormalArg (Literal (Int 0)) , NormalArg (Literal (Int 9)) ])

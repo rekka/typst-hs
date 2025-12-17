@@ -82,7 +82,7 @@
               (Block
                  (CodeBlock
                     [ Let
-                        (BasicBind (Just (Identifier "it")))
+                        (BasicBind (Ident (Identifier "it")))
                         (FuncCall
                            (FieldAccess
                               (Ident (Identifier "find"))

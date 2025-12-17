@@ -28,7 +28,7 @@
                             (Block
                                (CodeBlock
                                   [ Let
-                                      (BasicBind (Just (Identifier "after")))
+                                      (BasicBind (Ident (Identifier "after")))
                                       (FuncCall
                                          (Ident (Identifier "query"))
                                          [ NormalArg
@@ -42,7 +42,7 @@
                                          , NormalArg (Ident (Identifier "it"))
                                          ])
                                   , Let
-                                      (BasicBind (Just (Identifier "before")))
+                                      (BasicBind (Ident (Identifier "before")))
                                       (FuncCall
                                          (Ident (Identifier "query"))
                                          [ NormalArg
@@ -56,7 +56,7 @@
                                          , NormalArg (Ident (Identifier "it"))
                                          ])
                                   , Let
-                                      (BasicBind (Just (Identifier "elem")))
+                                      (BasicBind (Ident (Identifier "elem")))
                                       (If
                                          [ ( Not
                                                (Equals

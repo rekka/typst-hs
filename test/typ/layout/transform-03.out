@@ -5,7 +5,7 @@
     "typ/layout/transform-03.typ"
     ( line 2 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "r")))
+       (BasicBind (Ident (Identifier "r")))
        (FuncCall
           (Ident (Identifier "rect"))
           [ KeyValArg (Identifier "width") (Literal (Numeric 100.0 Pt))

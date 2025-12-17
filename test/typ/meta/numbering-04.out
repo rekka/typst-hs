@@ -3,7 +3,7 @@
     "typ/meta/numbering-04.typ"
     ( line 1 , column 2 )
     (For
-       (BasicBind (Just (Identifier "i")))
+       (BasicBind (Ident (Identifier "i")))
        (FuncCall
           (Ident (Identifier "range"))
           [ NormalArg (Literal (Int 0)) , NormalArg (Literal (Int 4)) ])
@@ -42,7 +42,7 @@
     "typ/meta/numbering-04.typ"
     ( line 8 , column 2 )
     (For
-       (BasicBind (Just (Identifier "i")))
+       (BasicBind (Ident (Identifier "i")))
        (FuncCall
           (Ident (Identifier "range"))
           [ NormalArg (Literal (Int 47)) , NormalArg (Literal (Int 51)) ])
@@ -81,7 +81,7 @@
     "typ/meta/numbering-04.typ"
     ( line 15 , column 2 )
     (For
-       (BasicBind (Just (Identifier "i")))
+       (BasicBind (Ident (Identifier "i")))
        (FuncCall
           (Ident (Identifier "range"))
           [ NormalArg (Literal (Int 2256))

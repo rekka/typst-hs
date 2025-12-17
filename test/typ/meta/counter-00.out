@@ -5,7 +5,7 @@
     "typ/meta/counter-00.typ"
     ( line 2 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "mine")))
+       (BasicBind (Ident (Identifier "mine")))
        (FuncCall
           (Ident (Identifier "counter"))
           [ NormalArg (Literal (String "mine!")) ]))

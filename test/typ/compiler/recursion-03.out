@@ -4,13 +4,13 @@
 , Code
     "typ/compiler/recursion-03.typ"
     ( line 2 , column 2 )
-    (Let (BasicBind (Just (Identifier "f"))) (Literal (Int 10)))
+    (Let (BasicBind (Ident (Identifier "f"))) (Literal (Int 10)))
 , SoftBreak
 , Code
     "typ/compiler/recursion-03.typ"
     ( line 3 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "f")))
+       (BasicBind (Ident (Identifier "f")))
        (FuncExpr [] (Ident (Identifier "f"))))
 , SoftBreak
 , Code

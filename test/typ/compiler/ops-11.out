@@ -4,17 +4,17 @@
 , Code
     "typ/compiler/ops-11.typ"
     ( line 3 , column 2 )
-    (Let (BasicBind (Just (Identifier "a"))) (Literal None))
+    (Let (BasicBind (Ident (Identifier "a"))) (Literal None))
 , SoftBreak
 , Code
     "typ/compiler/ops-11.typ"
     ( line 4 , column 2 )
-    (Let (BasicBind (Just (Identifier "b"))) (Literal None))
+    (Let (BasicBind (Ident (Identifier "b"))) (Literal None))
 , SoftBreak
 , Code
     "typ/compiler/ops-11.typ"
     ( line 5 , column 2 )
-    (Let (BasicBind (Just (Identifier "c"))) (Literal None))
+    (Let (BasicBind (Ident (Identifier "c"))) (Literal None))
 , SoftBreak
 , Code
     "typ/compiler/ops-11.typ"
@@ -124,9 +124,9 @@
     (Assign
        (Binding
           (DestructuringBind
-             [ WithKey (Identifier "a") (BasicBind (Just (Identifier "a")))
-             , Simple (BasicBind (Just (Identifier "b")))
-             , WithKey (Identifier "x") (BasicBind (Just (Identifier "c")))
+             [ WithKey (Identifier "a") (BasicBind (Ident (Identifier "a")))
+             , Simple (BasicBind (Ident (Identifier "b")))
+             , WithKey (Identifier "x") (BasicBind (Ident (Identifier "c")))
              ]))
        (Dict
           [ Reg ( Ident (Identifier "a") , Literal (Int 1) )
@@ -165,7 +165,7 @@
     "typ/compiler/ops-11.typ"
     ( line 23 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "a")))
+       (BasicBind (Ident (Identifier "a")))
        (Array [ Reg (Literal (Int 1)) , Reg (Literal (Int 2)) ]))
 , SoftBreak
 , Code
@@ -176,11 +176,11 @@
           (DestructuringBind
              [ WithKey
                  (Identifier "a")
-                 (ExprBind
+                 (BasicBind
                     (FuncCall
                        (FieldAccess (Ident (Identifier "at")) (Ident (Identifier "a")))
                        [ NormalArg (Literal (Int 0)) ]))
-             , Simple (BasicBind (Just (Identifier "b")))
+             , Simple (BasicBind (Ident (Identifier "b")))
              ]))
        (Dict
           [ Reg ( Ident (Identifier "a") , Literal (Int 3) )
@@ -210,7 +210,7 @@
     "typ/compiler/ops-11.typ"
     ( line 28 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "a")))
+       (BasicBind (Ident (Identifier "a")))
        (Array [ Reg (Literal (Int 1)) , Reg (Literal (Int 2)) ]))
 , SoftBreak
 , Code
@@ -285,7 +285,7 @@
     "typ/compiler/ops-11.typ"
     ( line 37 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "a")))
+       (BasicBind (Ident (Identifier "a")))
        (Array [ Reg (Literal (Int 1)) , Reg (Literal (Int 2)) ]))
 , SoftBreak
 , Code

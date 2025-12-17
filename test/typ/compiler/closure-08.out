@@ -6,7 +6,7 @@
     ( line 2 , column 2 )
     (Block
        (CodeBlock
-          [ Let (BasicBind (Just (Identifier "x"))) (Literal (Int 5))
+          [ Let (BasicBind (Ident (Identifier "x"))) (Literal (Int 5))
           , LetFunc
               (Identifier "g")
               []

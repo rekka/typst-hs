@@ -2,7 +2,7 @@
 [ Code
     "typ/compiler/for-01.typ"
     ( line 1 , column 2 )
-    (Let (BasicBind (Just (Identifier "out"))) (Array []))
+    (Let (BasicBind (Ident (Identifier "out"))) (Array []))
 , ParBreak
 , Comment
 , SoftBreak
@@ -10,7 +10,7 @@
     "typ/compiler/for-01.typ"
     ( line 4 , column 2 )
     (For
-       (BasicBind (Just (Identifier "v")))
+       (BasicBind (Ident (Identifier "v")))
        (Array
           [ Reg (Literal (Int 1))
           , Reg (Literal (Int 2))
@@ -32,8 +32,8 @@
     ( line 9 , column 2 )
     (For
        (DestructuringBind
-          [ Simple (BasicBind (Just (Identifier "i")))
-          , Simple (BasicBind (Just (Identifier "v")))
+          [ Simple (BasicBind (Ident (Identifier "i")))
+          , Simple (BasicBind (Ident (Identifier "v")))
           ])
        (FuncCall
           (FieldAccess
@@ -62,7 +62,7 @@
     "typ/compiler/for-01.typ"
     ( line 14 , column 2 )
     (For
-       (BasicBind (Just (Identifier "v")))
+       (BasicBind (Ident (Identifier "v")))
        (Dict
           [ Reg ( Ident (Identifier "a") , Literal (Int 4) )
           , Reg ( Ident (Identifier "b") , Literal (Int 5) )
@@ -83,8 +83,8 @@
     ( line 19 , column 2 )
     (For
        (DestructuringBind
-          [ Simple (BasicBind (Just (Identifier "k")))
-          , Simple (BasicBind (Just (Identifier "v")))
+          [ Simple (BasicBind (Ident (Identifier "k")))
+          , Simple (BasicBind (Ident (Identifier "v")))
           ])
        (Dict
           [ Reg ( Ident (Identifier "a") , Literal (Int 6) )
@@ -132,15 +132,15 @@
     "typ/compiler/for-01.typ"
     ( line 27 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "first"))) (Literal (Boolean True)))
+       (BasicBind (Ident (Identifier "first"))) (Literal (Boolean True)))
 , SoftBreak
 , Code
     "typ/compiler/for-01.typ"
     ( line 28 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "joined")))
+       (BasicBind (Ident (Identifier "joined")))
        (For
-          (BasicBind (Just (Identifier "c")))
+          (BasicBind (Ident (Identifier "c")))
           (Literal (String "abc\128105\8205\128105\8205\128102\8205\128102"))
           (Block
              (CodeBlock
@@ -173,7 +173,7 @@
        (Ident (Identifier "test"))
        [ NormalArg
            (For
-              (BasicBind (Just (Identifier "v")))
+              (BasicBind (Ident (Identifier "v")))
               (Literal (String ""))
               (Block (Content [])))
        , NormalArg (Literal None)
@@ -189,7 +189,7 @@
               (Ident (Identifier "type"))
               [ NormalArg
                   (For
-                     (BasicBind (Just (Identifier "v")))
+                     (BasicBind (Ident (Identifier "v")))
                      (Literal (String "1"))
                      (Block (Content [])))
               ])

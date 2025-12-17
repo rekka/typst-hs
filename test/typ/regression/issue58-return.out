@@ -10,13 +10,13 @@
        (Block
           (CodeBlock
              [ For
-                 (BasicBind (Just (Identifier "i")))
+                 (BasicBind (Ident (Identifier "i")))
                  (FuncCall
                     (Ident (Identifier "range")) [ NormalArg (Literal (Int 2)) ])
                  (Block
                     (CodeBlock
                        [ For
-                           (BasicBind (Just (Identifier "j")))
+                           (BasicBind (Ident (Identifier "j")))
                            (FuncCall
                               (Ident (Identifier "range")) [ NormalArg (Literal (Int 2)) ])
                            (Block
@@ -54,7 +54,7 @@
        []
        (Block
           (CodeBlock
-             [ Let (BasicBind (Just (Identifier "i"))) (Literal (Int 0))
+             [ Let (BasicBind (Ident (Identifier "i"))) (Literal (Int 0))
              , While
                  (LessThan (Ident (Identifier "i")) (Literal (Int 2)))
                  (Block
@@ -62,7 +62,7 @@
                        [ Assign
                            (Ident (Identifier "i"))
                            (Plus (Ident (Identifier "i")) (Literal (Int 1)))
-                       , Let (BasicBind (Just (Identifier "j"))) (Literal (Int 0))
+                       , Let (BasicBind (Ident (Identifier "j"))) (Literal (Int 0))
                        , While
                            (LessThan (Ident (Identifier "j")) (Literal (Int 2)))
                            (Block
@@ -107,13 +107,13 @@
        (Block
           (CodeBlock
              [ For
-                 (BasicBind (Just (Identifier "i")))
+                 (BasicBind (Ident (Identifier "i")))
                  (FuncCall
                     (Ident (Identifier "range")) [ NormalArg (Literal (Int 2)) ])
                  (Block
                     (CodeBlock
                        [ For
-                           (BasicBind (Just (Identifier "j")))
+                           (BasicBind (Ident (Identifier "j")))
                            (FuncCall
                               (Ident (Identifier "range")) [ NormalArg (Literal (Int 2)) ])
                            (Block
@@ -149,7 +149,7 @@
        []
        (Block
           (CodeBlock
-             [ Let (BasicBind (Just (Identifier "i"))) (Literal (Int 0))
+             [ Let (BasicBind (Ident (Identifier "i"))) (Literal (Int 0))
              , While
                  (LessThan (Ident (Identifier "i")) (Literal (Int 2)))
                  (Block
@@ -157,7 +157,7 @@
                        [ Assign
                            (Ident (Identifier "i"))
                            (Plus (Ident (Identifier "i")) (Literal (Int 1)))
-                       , Let (BasicBind (Just (Identifier "j"))) (Literal (Int 0))
+                       , Let (BasicBind (Ident (Identifier "j"))) (Literal (Int 0))
                        , While
                            (LessThan (Ident (Identifier "j")) (Literal (Int 2)))
                            (Block

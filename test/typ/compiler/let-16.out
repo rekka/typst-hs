@@ -8,9 +8,9 @@
     ( line 3 , column 2 )
     (Let
        (DestructuringBind
-          [ WithKey (Identifier "a") (BasicBind (Just (Identifier "a")))
-          , Simple (BasicBind (Just (Identifier "b")))
-          , WithKey (Identifier "x") (BasicBind (Just (Identifier "c")))
+          [ WithKey (Identifier "a") (BasicBind (Ident (Identifier "a")))
+          , Simple (BasicBind (Ident (Identifier "b")))
+          , WithKey (Identifier "x") (BasicBind (Ident (Identifier "c")))
           ])
        (Dict
           [ Reg ( Ident (Identifier "a") , Literal (Int 1) )

@@ -5,7 +5,7 @@
     "typ/compute/data-00.typ"
     ( line 2 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "data")))
+       (BasicBind (Ident (Identifier "data")))
        (FuncCall
           (Ident (Identifier "read"))
           [ NormalArg (Literal (String "/assets/files/hello.txt")) ]))

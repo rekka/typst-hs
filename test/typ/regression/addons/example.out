@@ -3,7 +3,7 @@
     "typ/regression/addons/example.typ"
     ( line 1 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "utf8string")))
+       (BasicBind (Ident (Identifier "utf8string")))
        (FuncCall
           (Ident (Identifier "read"))
           [ NormalArg (Literal (String "../something.txt")) ]))

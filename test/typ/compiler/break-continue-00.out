@@ -4,19 +4,19 @@
 , Code
     "typ/compiler/break-continue-00.typ"
     ( line 3 , column 2 )
-    (Let (BasicBind (Just (Identifier "var"))) (Literal (Int 0)))
+    (Let (BasicBind (Ident (Identifier "var"))) (Literal (Int 0)))
 , SoftBreak
 , Code
     "typ/compiler/break-continue-00.typ"
     ( line 4 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "error"))) (Literal (Boolean False)))
+       (BasicBind (Ident (Identifier "error"))) (Literal (Boolean False)))
 , ParBreak
 , Code
     "typ/compiler/break-continue-00.typ"
     ( line 6 , column 2 )
     (For
-       (BasicBind (Just (Identifier "i")))
+       (BasicBind (Ident (Identifier "i")))
        (FuncCall
           (Ident (Identifier "range")) [ NormalArg (Literal (Int 10)) ])
        (Block

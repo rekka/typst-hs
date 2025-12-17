@@ -3,7 +3,7 @@
     "typ/text/deco-01.typ"
     ( line 1 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "redact")))
+       (BasicBind (Ident (Identifier "redact")))
        (FuncCall
           (FieldAccess
              (Ident (Identifier "with")) (Ident (Identifier "strike")))
@@ -15,7 +15,7 @@
     "typ/text/deco-01.typ"
     ( line 2 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "highlight")))
+       (BasicBind (Ident (Identifier "highlight")))
        (FuncCall
           (FieldAccess
              (Ident (Identifier "with")) (Ident (Identifier "strike")))

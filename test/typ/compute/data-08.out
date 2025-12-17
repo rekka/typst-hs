@@ -5,7 +5,7 @@
     "typ/compute/data-08.typ"
     ( line 2 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "data")))
+       (BasicBind (Ident (Identifier "data")))
        (FuncCall
           (Ident (Identifier "toml"))
           [ NormalArg (Literal (String "/assets/files/toml-types.toml")) ]))

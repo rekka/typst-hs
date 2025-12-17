@@ -3,7 +3,7 @@
     "typ/bugs/math-realize-00.typ"
     ( line 1 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "my")))
+       (BasicBind (Ident (Identifier "my")))
        (Block
           (Content
              [ Equation
@@ -19,7 +19,7 @@
     "typ/bugs/math-realize-00.typ"
     ( line 2 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "f1")))
+       (BasicBind (Ident (Identifier "f1")))
        (FuncCall
           (Ident (Identifier "box"))
           [ KeyValArg (Identifier "baseline") (Literal (Numeric 10.0 Pt))
@@ -30,7 +30,7 @@
     "typ/bugs/math-realize-00.typ"
     ( line 3 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "f2")))
+       (BasicBind (Ident (Identifier "f2")))
        (FuncCall
           (Ident (Identifier "style"))
           [ NormalArg

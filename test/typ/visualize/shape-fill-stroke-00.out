@@ -3,7 +3,7 @@
     "typ/visualize/shape-fill-stroke-00.typ"
     ( line 1 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "variant")))
+       (BasicBind (Ident (Identifier "variant")))
        (FuncCall
           (FieldAccess
              (Ident (Identifier "with")) (Ident (Identifier "rect")))
@@ -15,11 +15,11 @@
     "typ/visualize/shape-fill-stroke-00.typ"
     ( line 2 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "items")))
+       (BasicBind (Ident (Identifier "items")))
        (For
           (DestructuringBind
-             [ Simple (BasicBind (Just (Identifier "i")))
-             , Simple (BasicBind (Just (Identifier "item")))
+             [ Simple (BasicBind (Ident (Identifier "i")))
+             , Simple (BasicBind (Ident (Identifier "item")))
              ])
           (FuncCall
              (FieldAccess

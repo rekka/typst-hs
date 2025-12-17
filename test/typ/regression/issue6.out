@@ -5,7 +5,7 @@
         "typ/regression/issue6.typ"
         ( line 1 , column 4 )
         (Let
-           (BasicBind (Just (Identifier "g")))
+           (BasicBind (Ident (Identifier "g")))
            (Block (Content [ Equation False [ Text "3" ] ])))
     , Code
         "typ/regression/issue6.typ"

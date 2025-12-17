@@ -49,7 +49,7 @@
          , Block
              (CodeBlock
                 [ Let
-                    (BasicBind (Just (Identifier "point"))) (Literal (String "."))
+                    (BasicBind (Ident (Identifier "point"))) (Literal (String "."))
                 , Plus (Literal (String "Four")) (Ident (Identifier "point"))
                 ])
          )
@@ -83,7 +83,7 @@
 , Code
     "typ/compiler/if-01.typ"
     ( line 35 , column 2 )
-    (Let (BasicBind (Just (Identifier "i"))) (Literal (Int 3)))
+    (Let (BasicBind (Ident (Identifier "i"))) (Literal (Int 3)))
 , SoftBreak
 , Code
     "typ/compiler/if-01.typ"

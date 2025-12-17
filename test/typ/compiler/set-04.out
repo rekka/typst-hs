@@ -5,7 +5,7 @@
     "typ/compiler/set-04.typ"
     ( line 2 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "choice")))
+       (BasicBind (Ident (Identifier "choice")))
        (Array
           [ Reg (Literal (String "monkey.svg"))
           , Reg (Literal (String "rhino.png"))
@@ -24,7 +24,7 @@
               (Block
                  (CodeBlock
                     [ Let
-                        (BasicBind (Just (Identifier "path")))
+                        (BasicBind (Ident (Identifier "path")))
                         (Plus
                            (Literal (String "/"))
                            (FuncCall

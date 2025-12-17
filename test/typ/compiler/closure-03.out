@@ -6,12 +6,13 @@
     ( line 2 , column 2 )
     (Block
        (CodeBlock
-          [ Let (BasicBind (Just (Identifier "mark"))) (Literal (String "!"))
+          [ Let
+              (BasicBind (Ident (Identifier "mark"))) (Literal (String "!"))
           , Let
-              (BasicBind (Just (Identifier "greet")))
+              (BasicBind (Ident (Identifier "greet")))
               (Block
                  (CodeBlock
-                    [ Let (BasicBind (Just (Identifier "hi"))) (Literal (String "Hi"))
+                    [ Let (BasicBind (Ident (Identifier "hi"))) (Literal (String "Hi"))
                     , FuncExpr
                         [ NormalParam (Identifier "name") ]
                         (Block

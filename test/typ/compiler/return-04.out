@@ -9,9 +9,9 @@
        [ SinkParam (Just (Identifier "args")) ]
        (Block
           (CodeBlock
-             [ Let (BasicBind (Just (Identifier "s"))) (Literal (Int 0))
+             [ Let (BasicBind (Ident (Identifier "s"))) (Literal (Int 0))
              , For
-                 (BasicBind (Just (Identifier "v")))
+                 (BasicBind (Ident (Identifier "v")))
                  (FuncCall
                     (FieldAccess
                        (Ident (Identifier "pos")) (Ident (Identifier "args")))

@@ -30,7 +30,7 @@
     "typ/layout/par-knuth-00.typ"
     ( line 5 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "story")))
+       (BasicBind (Ident (Identifier "story")))
        (Block
           (Content
              [ SoftBreak

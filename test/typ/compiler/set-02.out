@@ -23,7 +23,7 @@
     "typ/compiler/set-02.typ"
     ( line 5 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "x")))
+       (BasicBind (Ident (Identifier "x")))
        (Block
           (Content
              [ Text "And"

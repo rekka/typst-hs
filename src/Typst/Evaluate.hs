@@ -1235,21 +1235,17 @@ arrayExprToBind :: Monad m => [Spreadable Expr] -> MP m Bind
 arrayExprToBind spredables = DestructuringBind <$> mapM spreadableToBindPart spredables
     where
       spreadableToBindPart (Reg expr) = Simple <$> exprToBind expr
-      spreadableToBindPart (Spr (Ident ident)) = pure $ Sink $ Just ident
-      spreadableToBindPart (Spr expr) = pure $ ExprSink expr
+      spreadableToBindPart (Spr expr) = pure $ Sink $ Just expr
 
 dictExprToBind :: Monad m => [Spreadable (Expr, Expr)] -> MP m Bind
 dictExprToBind spredables = DestructuringBind <$> mapM spreadableToBindPart spredables
     where
       spreadableToBindPart (Reg (Ident ident, expr)) = WithKey ident <$> exprToBind expr
       spreadableToBindPart (Reg (_, _)) = fail $ "expected identifier"
-      spreadableToBindPart (Spr (Ident ident)) = pure $ Sink $ Just ident
-      spreadableToBindPart (Spr expr) = pure $ ExprSink expr
+      spreadableToBindPart (Spr expr) = pure $ Sink $ Just expr
 
 exprToBind :: Monad m => Expr -> MP m Bind
 exprToBind (Binding bind) = pure $ bind
-exprToBind Underscore = pure $ BasicBind $ Nothing
-exprToBind (Ident ident) = pure $ BasicBind $ Just ident
 exprToBind (Array spredables) = arrayExprToBind spredables
 exprToBind (Dict spredables) = dictExprToBind spredables
-exprToBind expr = pure $ ExprBind expr
+exprToBind expr = pure $ BasicBind expr

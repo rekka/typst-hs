@@ -3,7 +3,7 @@
     "typ/regression/issue26.typ"
     ( line 1 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "x")))
+       (BasicBind (Ident (Identifier "x")))
        (Dict [ Reg ( Ident (Identifier "a") , Literal (Int 4) ) ]))
 , SoftBreak
 , Code

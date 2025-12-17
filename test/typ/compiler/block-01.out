@@ -18,7 +18,7 @@
        [ NormalArg
            (Block
               (CodeBlock
-                 [ Let (BasicBind (Just (Identifier "v"))) (Literal (Int 0)) ]))
+                 [ Let (BasicBind (Ident (Identifier "v"))) (Literal (Int 0)) ]))
        , NormalArg (Literal None)
        ])
 , ParBreak
@@ -43,7 +43,7 @@
        [ NormalArg
            (Block
               (CodeBlock
-                 [ Let (BasicBind (Just (Identifier "x"))) (Literal (String "m"))
+                 [ Let (BasicBind (Ident (Identifier "x"))) (Literal (String "m"))
                  , Plus (Ident (Identifier "x")) (Literal (String "y"))
                  ]))
        , NormalArg (Literal (String "my"))
@@ -59,8 +59,8 @@
        [ NormalArg
            (Block
               (CodeBlock
-                 [ Let (BasicBind (Just (Identifier "x"))) (Literal (Int 1))
-                 , Let (BasicBind (Just (Identifier "y"))) (Literal (Int 2))
+                 [ Let (BasicBind (Ident (Identifier "x"))) (Literal (Int 1))
+                 , Let (BasicBind (Ident (Identifier "y"))) (Literal (Int 2))
                  , Plus (Ident (Identifier "x")) (Ident (Identifier "y"))
                  ]))
        , NormalArg (Literal (Int 3))

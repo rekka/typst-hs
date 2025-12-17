@@ -5,7 +5,7 @@
     "typ/layout/repeat-00.typ"
     ( line 2 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "sections")))
+       (BasicBind (Ident (Identifier "sections")))
        (Array
           [ Reg
               (Array
@@ -31,7 +31,7 @@
     "typ/layout/repeat-00.typ"
     ( line 11 , column 2 )
     (For
-       (BasicBind (Just (Identifier "section")))
+       (BasicBind (Ident (Identifier "section")))
        (Ident (Identifier "sections"))
        (Block
           (Content

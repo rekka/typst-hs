@@ -54,7 +54,7 @@
                       , Block
                           (CodeBlock
                              [ Let
-                                 (BasicBind (Just (Identifier "element")))
+                                 (BasicBind (Ident (Identifier "element")))
                                  (FieldAccess
                                     (Ident (Identifier "element")) (Ident (Identifier "it")))
                              , Literal (String "[")

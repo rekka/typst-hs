@@ -5,7 +5,7 @@
     "typ/math/content-00.typ"
     ( line 2 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "monkey")))
+       (BasicBind (Ident (Identifier "monkey")))
        (FuncCall
           (Ident (Identifier "move"))
           [ KeyValArg (Identifier "dy") (Literal (Numeric 0.2 Em))

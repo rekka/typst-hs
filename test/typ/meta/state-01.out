@@ -17,7 +17,7 @@
     "typ/meta/state-01.typ"
     ( line 4 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "ls")))
+       (BasicBind (Ident (Identifier "ls")))
        (FuncCall
           (Ident (Identifier "state"))
           [ NormalArg (Literal (String "lorem"))
@@ -79,7 +79,7 @@
     "typ/meta/state-01.typ"
     ( line 10 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "fs")))
+       (BasicBind (Ident (Identifier "fs")))
        (FuncCall
           (Ident (Identifier "state"))
           [ NormalArg (Literal (String "fader"))

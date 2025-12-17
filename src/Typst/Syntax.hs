@@ -77,16 +77,14 @@ data Param
   deriving (Show, Ord, Eq, Data, Typeable)
 
 data Bind
-  = BasicBind (Maybe Identifier)
+  = BasicBind Expr
   | DestructuringBind [BindPart]
-  | ExprBind Expr
   deriving (Show, Ord, Eq, Data, Typeable)
 
 data BindPart
   = Simple Bind
   | WithKey Identifier Bind
-  | Sink (Maybe Identifier)
-  | ExprSink Expr
+  | Sink (Maybe Expr)
   deriving (Show, Ord, Eq, Data, Typeable)
 
 data Unit = Pt | Mm | Cm | In | Deg | Rad | Em | Fr | Percent

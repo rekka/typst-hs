@@ -15,7 +15,7 @@
        , KeyValArg (Identifier "spacing") (Literal (Numeric 1.0 Fr))
        , SpreadArg
            (For
-              (BasicBind (Just (Identifier "c")))
+              (BasicBind (Ident (Identifier "c")))
               (Literal (String "ABCDEFGHI"))
               (Block
                  (CodeBlock

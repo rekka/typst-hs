@@ -5,9 +5,9 @@
     "typ/compiler/break-continue-03.typ"
     ( line 3 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "x")))
+       (BasicBind (Ident (Identifier "x")))
        (For
-          (BasicBind (Just (Identifier "i")))
+          (BasicBind (Ident (Identifier "i")))
           (FuncCall
              (Ident (Identifier "range")) [ NormalArg (Literal (Int 5)) ])
           (Block

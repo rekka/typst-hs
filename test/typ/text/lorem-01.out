@@ -14,7 +14,7 @@
     (Block
        (CodeBlock
           [ Let
-              (BasicBind (Just (Identifier "sentences")))
+              (BasicBind (Ident (Identifier "sentences")))
               (FuncCall
                  (FieldAccess
                     (Ident (Identifier "map"))
@@ -37,9 +37,9 @@
                         [ NormalParam (Identifier "s") ]
                         (Plus (Ident (Identifier "s")) (Literal (String "."))))
                  ])
-          , Let (BasicBind (Just (Identifier "used"))) (Literal (Int 0))
+          , Let (BasicBind (Ident (Identifier "used"))) (Literal (Int 0))
           , For
-              (BasicBind (Just (Identifier "s")))
+              (BasicBind (Ident (Identifier "s")))
               (Ident (Identifier "sentences"))
               (Block
                  (CodeBlock

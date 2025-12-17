@@ -11,7 +11,7 @@
     "typ/compiler/dict-00.typ"
     ( line 7 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "dict")))
+       (BasicBind (Ident (Identifier "dict")))
        (Dict
           [ Reg ( Ident (Identifier "normal") , Literal (Int 1) )
           , Reg ( Literal (String "spacy key") , Literal (Int 2) )

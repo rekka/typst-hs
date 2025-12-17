@@ -106,7 +106,7 @@
     "typ/compiler/ops-15.typ"
     ( line 14 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "inc2")))
+       (BasicBind (Ident (Identifier "inc2")))
        (FuncCall
           (FieldAccess
              (Ident (Identifier "with")) (Ident (Identifier "inc")))

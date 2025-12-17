@@ -7,7 +7,7 @@
     (Block
        (CodeBlock
           [ Let
-              (BasicBind (Just (Identifier "v")))
+              (BasicBind (Ident (Identifier "v")))
               (Array
                  [ Reg (Literal (Int 1))
                  , Reg (Literal (Int 2))
@@ -18,9 +18,9 @@
               []
               (Block
                  (CodeBlock
-                    [ Let (BasicBind (Just (Identifier "s"))) (Literal (Int 0))
+                    [ Let (BasicBind (Ident (Identifier "s"))) (Literal (Int 0))
                     , For
-                        (BasicBind (Just (Identifier "v")))
+                        (BasicBind (Ident (Identifier "v")))
                         (Ident (Identifier "v"))
                         (Block
                            (CodeBlock

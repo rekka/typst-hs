@@ -6,7 +6,7 @@
 , Code
     "typ/compiler/closure-00.typ"
     ( line 4 , column 2 )
-    (Let (BasicBind (Just (Identifier "x"))) (Literal (String "x")))
+    (Let (BasicBind (Ident (Identifier "x"))) (Literal (String "x")))
 , ParBreak
 , Comment
 , SoftBreak

@@ -5,7 +5,7 @@
     "typ/compiler/color-00.typ"
     ( line 2 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "c")))
+       (BasicBind (Ident (Identifier "c")))
        (FuncCall
           (Ident (Identifier "cmyk"))
           [ NormalArg (Literal (Numeric 50.0 Percent))
@@ -58,7 +58,7 @@
     "typ/compiler/color-00.typ"
     ( line 11 , column 2 )
     (For
-       (BasicBind (Just (Identifier "x")))
+       (BasicBind (Ident (Identifier "x")))
        (FuncCall
           (Ident (Identifier "range"))
           [ NormalArg (Literal (Int 0)) , NormalArg (Literal (Int 11)) ])
@@ -86,7 +86,7 @@
     "typ/compiler/color-00.typ"
     ( line 14 , column 2 )
     (For
-       (BasicBind (Just (Identifier "x")))
+       (BasicBind (Ident (Identifier "x")))
        (FuncCall
           (Ident (Identifier "range"))
           [ NormalArg (Literal (Int 0)) , NormalArg (Literal (Int 11)) ])

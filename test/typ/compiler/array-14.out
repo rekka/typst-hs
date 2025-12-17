@@ -7,7 +7,7 @@
     (Block
        (CodeBlock
           [ Let
-              (BasicBind (Just (Identifier "array")))
+              (BasicBind (Ident (Identifier "array")))
               (Array
                  [ Reg (Literal (Int 0))
                  , Reg (Literal (Int 1))

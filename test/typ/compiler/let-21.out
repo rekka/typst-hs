@@ -8,7 +8,7 @@
     ( line 3 , column 2 )
     (Let
        (DestructuringBind
-          [ Simple (BasicBind (Just (Identifier "a"))) , Sink Nothing ])
+          [ Simple (BasicBind (Ident (Identifier "a"))) , Sink Nothing ])
        (Dict
           [ Reg ( Ident (Identifier "a") , Literal (Int 1) )
           , Reg ( Ident (Identifier "b") , Literal (Int 2) )

@@ -7,7 +7,7 @@
     (Block
        (CodeBlock
           [ Let
-              (BasicBind (Just (Identifier "tasks")))
+              (BasicBind (Ident (Identifier "tasks")))
               (Dict
                  [ Reg
                      ( Ident (Identifier "a")

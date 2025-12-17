@@ -21,7 +21,7 @@
     "typ/compiler/include-00.typ"
     ( line 9 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "chap2")))
+       (BasicBind (Ident (Identifier "chap2")))
        (Include
           (Plus
              (Plus (Literal (String "modu")) (Literal (String "les/chap")))

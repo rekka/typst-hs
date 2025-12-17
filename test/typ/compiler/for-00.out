@@ -7,7 +7,7 @@
     "typ/compiler/for-00.typ"
     ( line 4 , column 2 )
     (For
-       (BasicBind (Just (Identifier "x")))
+       (BasicBind (Ident (Identifier "x")))
        (Array [])
        (Block (Content [ Text "Nope" ])))
 , ParBreak
@@ -20,8 +20,8 @@
     ( line 8 , column 2 )
     (For
        (DestructuringBind
-          [ Simple (BasicBind (Just (Identifier "k")))
-          , Simple (BasicBind (Just (Identifier "v")))
+          [ Simple (BasicBind (Ident (Identifier "k")))
+          , Simple (BasicBind (Ident (Identifier "v")))
           ])
        (Dict
           [ Reg ( Ident (Identifier "Name") , Literal (String "Typst") )
@@ -55,7 +55,7 @@
        (CodeBlock
           [ Literal (String "[")
           , For
-              (BasicBind (Just (Identifier "v")))
+              (BasicBind (Ident (Identifier "v")))
               (Array
                  [ Reg (Literal (Int 1))
                  , Reg (Literal (Int 2))
@@ -108,7 +108,7 @@
     "typ/compiler/for-00.typ"
     ( line 29 , column 2 )
     (For
-       (BasicBind (Just (Identifier "v")))
+       (BasicBind (Ident (Identifier "v")))
        (Array
           [ Reg (Literal (Int 1))
           , Reg (Literal (Int 2))

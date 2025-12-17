@@ -5,14 +5,14 @@
     "typ/compiler/string-18.typ"
     ( line 2 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "str")))
+       (BasicBind (Ident (Identifier "str")))
        (Literal (String "Typst, LaTeX, Word, InDesign")))
 , SoftBreak
 , Code
     "typ/compiler/string-18.typ"
     ( line 3 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "array")))
+       (BasicBind (Ident (Identifier "array")))
        (Array
           [ Reg (Literal (String "Typst"))
           , Reg (Literal (String "LaTeX"))

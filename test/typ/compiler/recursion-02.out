@@ -4,7 +4,7 @@
 , Code
     "typ/compiler/recursion-02.typ"
     ( line 2 , column 2 )
-    (Let (BasicBind (Just (Identifier "f"))) (Literal (Int 10)))
+    (Let (BasicBind (Ident (Identifier "f"))) (Literal (Int 10)))
 , SoftBreak
 , Code
     "typ/compiler/recursion-02.typ"

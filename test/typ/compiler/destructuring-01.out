@@ -6,8 +6,8 @@
     ( line 2 , column 2 )
     (Let
        (DestructuringBind
-          [ Simple (BasicBind Nothing)
-          , Simple (BasicBind (Just (Identifier "x")))
+          [ Simple (BasicBind Underscore)
+          , Simple (BasicBind (Ident (Identifier "x")))
           ])
        (Dict [ Reg ( Ident (Identifier "x") , Literal (Int 1) ) ]))
 , ParBreak

@@ -5,7 +5,7 @@
     "typ/compute/construct-07.typ"
     ( line 2 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "envelope")))
+       (BasicBind (Ident (Identifier "envelope")))
        (FuncCall
           (Ident (Identifier "symbol"))
           [ NormalArg (Literal (String "\128386"))

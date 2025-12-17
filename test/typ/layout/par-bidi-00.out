@@ -5,7 +5,7 @@
     "typ/layout/par-bidi-00.typ"
     ( line 2 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "content")))
+       (BasicBind (Ident (Identifier "content")))
        (FuncCall
           (Ident (Identifier "par"))
           [ BlockArg

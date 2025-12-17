@@ -5,7 +5,7 @@
     "typ/compiler/string-12.typ"
     ( line 2 , column 2 )
     (Let
-       (BasicBind (Just (Identifier "date")))
+       (BasicBind (Ident (Identifier "date")))
        (FuncCall
           (Ident (Identifier "regex"))
           [ NormalArg (Literal (String "\\d{2}:\\d{2}")) ]))
